@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{{block.super}}<br><br>
+
+<body style="background-color:black;">
+  
+<div class="container" style="color:white;">
+  <h1 class="text-center">awards - reviews</h1>
+    <img src="https://marketingbitz.com/wp-content/uploads/2018/08/BOOST_GUEST_BLOG_IMAGE_SET_5_FIVE_STAR_REVIEW_BG_1200x628px_v1_1.jpg" alt="awwwards"><br> <br> <br> <hr> <br>
+  <h2 class="text-center">projects</h2>
+  <div class="jumbotron" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWGhLYdpxI9f7PmIUZ8VMeKSVwsvBpaVLPJmDQjLcx4q2KyPaWQ'); background-repeat: no-repeat; background-size: cover;"></div>
+  <p class="text-center"> available projects:</p>
+  <div class="row">
+  <!-- Projects are displayed here -->
+  
+  
+    {% for project in projects %}
+    <div class="col-md-6">
+    <h3 style="margin-left:15%">{{project.project_title}}</h3>
+    <img src="{{project.landing_page.url}}" alt="" height="400" width="400" style="border-radius:50px"><br><br>
+    <button type="button" class="btn btn-outline-success">
+    <a href="{% url 'project' project.pk %}" class="btn">See More</a></button>
+    <p>Project link: <a target="_blank" href="{{project.live_site}}">{{project.live_site}}</a> </p>
+    <ul>
+      <li>Design: {{project.design}}</li>
+      <li>Usability: {{project.usability}}</li>
+      <li>Content: {{project.content}}</li>
+    </ul>
+    <p class=>By: <span>{{project.user.username}}</span></p>
+  
+  </div>
+
+    {% endfor %}
+  </div>
+  </div>
+
+</div>
+{% endblock %}
+</body> 
