@@ -48,5 +48,5 @@ An application that allows a user to post a project he/she has created and get i
 Crystalalice21@gmail.com
 
 ### Licence
-[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)]
+[![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)] (https://github.com/ivxxi/Django3/blob/master/LICENSE)
 Copyright(c) 2020 Crystal Alice
